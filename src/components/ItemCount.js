@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const Contador = ({StockI, Initial}) => {
     console.log('Aqui hay un render del componente contador');
-    const [count, setCount] = useState(Initial)
+    const [count, setCount] = useState(parseInt(Initial))
     const [stock, setStock] = useState(StockI)
 
     const addHandler = () => { 
@@ -25,7 +25,7 @@ const Contador = ({StockI, Initial}) => {
              <strong className="p-4 text-light"> Stock = {stock} </strong>
              <div className="col-2 m-auto d-flex m-auto justify-content-center">
                 <button className="btn btn-light" onClick={subHandler}>-</button>
-                <strong className="btn btn-light"> {count} </strong>
+                <strong className="btn btn-light">{count}</strong>
                 <button className="btn btn-light" onClick={addHandler}>+</button>
              </div>
           </div>
