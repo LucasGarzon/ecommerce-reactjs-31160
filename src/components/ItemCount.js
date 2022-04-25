@@ -13,12 +13,10 @@ const Contador = ({StockI, Initial}) => {
             setCount(count - 1)
         }
     }
-
     const sendCart = () => {
         setStock(stock - count)
         setCount(parseInt(Initial))
     }
-
     return (
         <>
           <div className="container-fluid m-0 d-flex flex-column justify-item-center bg-secondary p-4">
