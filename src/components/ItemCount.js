@@ -17,16 +17,16 @@ const Contador = ({StockI, Initial}) => {
             setStock(stock + 1)
         }
     }
-    
+
     return (
         <>
-          <div className="container d-flex flex-column justify-item-center">
+          <div className="container-fluid m-0 d-flex flex-column justify-item-center bg-secondary p-4">
              <div>Contador</div>
-             <strong> Stock = {stock} </strong>
-             <div className="col-2 m-auto">
-                <button onClick={subHandler}>-</button>
-                <strong> {count} </strong>
-                <button onClick={addHandler}>+</button>
+             <strong className="p-4 text-light"> Stock = {stock} </strong>
+             <div className="col-2 m-auto d-flex m-auto justify-content-center">
+                <button className="btn btn-light" onClick={subHandler}>-</button>
+                <strong className="btn btn-light"> {count} </strong>
+                <button className="btn btn-light" onClick={addHandler}>+</button>
              </div>
           </div>
         </>
