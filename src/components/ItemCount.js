@@ -1,21 +1,22 @@
 import { useState } from "react"
 
 const Contador = ({StockI, Initial}) => {
-    console.log('Aqui hay un render del componente contador');
     const [count, setCount] = useState(parseInt(Initial))
     const [stock, setStock] = useState(StockI)
-
     const addHandler = () => { 
-        if (stock > 0) {
+        if (stock > count) {
             setCount(count + 1)
-            setStock(stock - 1)
         }
     }
     const subHandler = () => { 
         if (count > 0) {
             setCount(count - 1)
-            setStock(stock + 1)
         }
+    }
+
+    const sendCart = () => {
+        setStock(stock - count)
+        setCount(parseInt(Initial))
     }
 
     return (
@@ -27,6 +28,9 @@ const Contador = ({StockI, Initial}) => {
                 <button className="btn btn-light" onClick={subHandler}>-</button>
                 <strong className="btn btn-light">{count}</strong>
                 <button className="btn btn-light" onClick={addHandler}>+</button>
+             </div>
+             <div className="container p-4 d-flex m-auto justify-content-center">
+                <button className="btn btn-light col-2 p-2" onClick={sendCart}>Agregar al carrito</button>
              </div>
           </div>
         </>
