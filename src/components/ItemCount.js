@@ -19,18 +19,17 @@ const Contador = ({StockI, Initial}) => {
     }
     return (
         <>
-          <div className="container-fluid m-0 d-flex flex-column justify-item-center bg-secondary p-4">
-             <div>Contador</div>
-             <strong className="p-4 text-light"> Stock = {stock} </strong>
-             <div className="col-2 m-auto d-flex m-auto justify-content-center">
-                <button className="btn btn-light" onClick={subHandler}>-</button>
-                <strong className="btn btn-light">{count}</strong>
-                <button className="btn btn-light" onClick={addHandler}>+</button>
-             </div>
-             <div className="container p-4 d-flex m-auto justify-content-center">
-                <button className="btn btn-light col-6 col-md-2 p-2" onClick={sendCart}>Agregar al carrito</button>
-             </div>
-          </div>
+        	<div className="container p-4">
+          	<h6 className="p-3">Stock: {stock}</h6>
+            <div className="col-2 m-auto d-flex m-auto justify-content-center">
+              <button className="btn btn-light" onClick={subHandler}>-</button>
+              <strong className="btn btn-light">{count}</strong>
+              <button className="btn btn-light" onClick={addHandler}>+</button>
+            </div>
+            <div className="container p-4 d-flex m-auto justify-content-center">
+              <button className="btn btn-light" onClick={sendCart}>Agregar al carrito</button>
+            </div>
+        </div>
         </>
     )
 }
