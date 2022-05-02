@@ -1,5 +1,4 @@
-import ItemCount from './ItemCount'
-import ItemInfo from './ItemCount'
+import ItemDetailContainer from './ItemDetailContainer'
 
 export const Item = ( {product} ) => {
 
@@ -8,11 +7,15 @@ export const Item = ( {product} ) => {
   return (
 		<>
 			<div className="card p-1 m-1 col-12 col-md-4">
-				<img src={imagen} className="card-img-top p-4 card__img m-auto"/>
+				<div className="container">
+          <div className="row m-auto col-12">
+            <img src={imagen} className="p-5 m-5 card__img m-auto"/>
+          </div>
+        </div>
 				<div className="card-body">
 					<h5 className="card-title">{nombre}</h5>
 					<h6>Precio: ${precio}</h6>
-					<ItemCount StockI={stock} Initial={0} />
+					<ItemDetailContainer productos={product} productId={id}/>
 				</div>
 			</div>
 		</>

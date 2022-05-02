@@ -20,7 +20,7 @@ const Contador = ({StockI, Initial}) => {
     return (
         <>
         	<div className="container p-4">
-          	<h6 className="p-3">Stock: {stock}</h6>
+          	<h6 className="p-3 text-center">Stock: {stock}</h6>
             <div className="col-2 m-auto d-flex m-auto justify-content-center">
               <button className="btn btn-light" onClick={subHandler}>-</button>
               <strong className="btn btn-light">{count}</strong>
