@@ -1,4 +1,4 @@
-import ItemDetailContainer from './ItemDetailContainer'
+import { Link } from "react-router-dom"
 
 export const Item = ( {product} ) => {
 
@@ -12,10 +12,10 @@ export const Item = ( {product} ) => {
             <img src={imagen} className="p-5 m-5 card__img m-auto"/>
           </div>
         </div>
-				<div className="card-body">
-					<h5 className="card-title">{nombre}</h5>
-					<h6>Precio: ${precio}</h6>
-					<ItemDetailContainer productos={product} productId={id}/>
+				<div className="card-body text-center p-3">
+					<h5 className="card-title p-3">{nombre}</h5>
+					<h6 className="p-2">Precio: ${precio}</h6>
+					<Link className="btn btn-primary p-2" to={`/itemDetail/${id}`}>Ver más</Link>
 				</div>
 			</div>
 		</>

@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { productsMasks } from "../data/productsData";
 import ItemDetail from "./ItemDetail";
 
-function ItemDetailContainer({productId}) {
 
-  const [product, setProduct] = useState([])
+function ItemDetailContainer() {
+
+	const { itemId } = useParams()
+
+  const [product, setProduct] = useState({})
 
 	useEffect(() => {
 		getItem()
-	}, [])
+	}, [itemId])
 
 	const getItem = () => { 
 
@@ -19,18 +23,10 @@ function ItemDetailContainer({productId}) {
 		})
 
 		getItemPromise.then( data => {
-			let prod = {}
-			data.forEach(e => {
-				if (e.id == productId) {
-					prod = e
-				}
-			});
-			setProduct( prod )
-		}) 
+		setProduct(data.find( d => d.id == itemId ))
+		})
 	}
-
-
-
+	
   return (
     <>
       <ItemDetail item={product}/>
