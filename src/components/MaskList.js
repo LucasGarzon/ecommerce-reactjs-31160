@@ -3,7 +3,7 @@ import { productsMasks } from "../data/productsData";
 
 function MaskList() {
   
-  const list= productsMasks
+  const list = productsMasks
 
   return (
     <>

@@ -2,7 +2,7 @@ import {useState } from "react"
 import { useAppContext } from "./context/appContext"
 import { useCartContext } from "./context/CartContext"
 
-const Contador = ({onAdd, StockI}) => {
+const Contador = ({onAdd, StockI, id}) => {
     
     const [count, setCount] = useState(parseInt(0))
 
@@ -20,6 +20,17 @@ const Contador = ({onAdd, StockI}) => {
         }
     }
 
+    const handleClick = (id, cantidad) => {
+      const findProduct = products.find((producto) => producto.id === id)
+
+      if (!findProduct) {
+          alert("Error en la base de datos")
+          return
+      }
+      addToCart(findProduct, cantidad)
+      onAdd(count)
+    }
+
     return (
         <>
         	<div className="container p-4">
@@ -30,7 +41,7 @@ const Contador = ({onAdd, StockI}) => {
               <button className="btn btn-light" onClick={addHandler}>+</button>
             </div>
             <div className="container p-4 d-flex m-auto justify-content-center">
-              <button className="btn btn-light" onClick={() => onAdd(count)}>Agregar al carrito</button>
+              <button className="btn btn-light" onClick={() => handleClick(id, count)}>Agregar al carrito</button>
             </div>
         </div>
         </>
