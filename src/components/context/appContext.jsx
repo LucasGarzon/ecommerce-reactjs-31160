@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { getItem } from "../../data/productsData"
 
+
 const AppContext = createContext()
 
 export const useAppContext = () => useContext(AppContext)
