@@ -24,10 +24,12 @@ const ItemListContainer = ({greeting}) => {
 
   return (
     <>
+		 <>
       <div className="container-fluid bg-secondary">
           <h1 className="p-5 text-light text-center">{greeting}</h1>
           <ItemList items={products}/>   
       </div>  
+		 </>
     </>
   )
 }

@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react"
+import {useState } from "react"
+import { useAppContext } from "./context/appContext"
+import { useCartContext } from "./context/CartContext"
 
-const Contador = ({StockI, Initial}) => {
+const Contador = ({onAdd, StockI}) => {
     
-    const [count, setCount] = useState(parseInt(Initial))
-    const [stock, setStock] = useState(StockI)
+    const [count, setCount] = useState(parseInt(0))
+
+    const { addToCart } = useCartContext()
+    const { products } = useAppContext()
 
     const addHandler = () => { 
         if (StockI > count) {
@@ -16,10 +20,6 @@ const Contador = ({StockI, Initial}) => {
         }
     }
 
-    const onAdd = () => {
-        console.log('onAdd...');  
-    }
-
     return (
         <>
         	<div className="container p-4">
@@ -30,7 +30,7 @@ const Contador = ({StockI, Initial}) => {
               <button className="btn btn-light" onClick={addHandler}>+</button>
             </div>
             <div className="container p-4 d-flex m-auto justify-content-center">
-              <button className="btn btn-light" onClick={onAdd}>Agregar al carrito</button>
+              <button className="btn btn-light" onClick={() => onAdd(count)}>Agregar al carrito</button>
             </div>
         </div>
         </>

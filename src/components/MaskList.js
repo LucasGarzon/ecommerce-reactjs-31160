@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { productsMasks } from "../data/productsData";
 
 function MaskList() {
   
-  const [list, setList] = useState(productsMasks)
+  const list= productsMasks
 
   return (
     <>
@@ -14,4 +13,5 @@ function MaskList() {
     </>
   )
 }
+
 export default MaskList

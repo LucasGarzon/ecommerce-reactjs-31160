@@ -1,8 +1,10 @@
+import { useContext } from "react"
 import { Link } from "react-router-dom"
+
 
 export const Item = ( {product} ) => {
 
-	const {id, nombre, precio, imagen, stock, info} = product
+	const {id, nombre, precio, imagen} = product
 
   return (
 		<>

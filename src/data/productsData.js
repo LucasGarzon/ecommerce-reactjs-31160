@@ -40,3 +40,11 @@ export const productsMasks = [
         info: "The Great Fairy's Mask is required to collect all the Stray Fairies in the various Temples. This mask will float and shimmer when there is a Stray Fairy in the room, and make those Stray Fairies fly towards Link unless they are trapped. To get it, grab the Stray Fairy at either the Laundry Pool (day) or East Clock Town (night) and bring it to the Great Fairy Fountain in North Clock Town in Link's normal, Hylian, form."
     }
 ]
+
+const task = new Promise((resp) => {
+	resp(productsMasks)
+}, 2000)
+
+export const getItem = () => {
+	return task
+}
