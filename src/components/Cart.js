@@ -6,6 +6,7 @@ import { useCartContext } from "./context/CartContext"
 function Cart() {
   
   const { cart } = useCartContext()
+  const { clear } = useCartContext()
 
   const [total, setTotal] = useState([])
   const [emptyCart, setEmptyCart] = useState()
@@ -50,6 +51,7 @@ function Cart() {
           {cart.map( p  => <CartDetail key={p.id} ProuctCart={p}/>)}
           <div className="row text-center m-auto p-4">
              <h2>Total:${total}</h2>
+             <button className="btn btn-danger col-10 col-md-3 m-auto mt-4 p-2" onClick={() => clear()}>Borrar todo el carrito</button>
           </div>
         </div>
       )}

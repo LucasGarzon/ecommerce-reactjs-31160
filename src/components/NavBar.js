@@ -24,9 +24,11 @@ function NavBar() {
               </a>
               <MaskList/>
             </li>
+            <li className="nav-item m-0 m-lg-auto">
+              <CartWidget/>
+            </li>
           </ul>
         </div>
-        <CartWidget/>
         </form>
         </div>
       </div>
