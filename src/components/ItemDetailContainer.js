@@ -1,36 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { productsMasks } from "../data/productsData";
 import ItemDetail from "./ItemDetail";
-
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 function ItemDetailContainer() {
+  const { itemId } = useParams();
 
-	const { itemId } = useParams()
+  const [product, setProduct] = useState({});
 
-  const [product, setProduct] = useState({})
+  useEffect(() => {
+    getItem();
+  }, [itemId]);
 
-	useEffect(() => {
-		getItem()
-	}, [itemId])
+  const getItem = () => {
+    const getItemPromise = new Promise((res, rej) => {
+      const db = getFirestore();
 
-	const getItem = () => { 
+      const itemCollection = collection(db, "ItemCollection");
+      getDocs(itemCollection).then((snapshot) => {
+        const items = snapshot.docs.map((doc) => ({ ...doc.data() }));
+        res(items);
+      });
+    });
 
-		const getItemPromise = new Promise((result, reject) => { 
-			setTimeout(() => {
-				result( productsMasks )	
-			}, 2000);
-		})
+    getItemPromise.then((data) => {
+      setProduct(data.find((d) => d.id == itemId));
+    });
+  };
 
-		getItemPromise.then( data => {
-		setProduct(data.find( d => d.id == itemId ))
-		})
-	}
-	
   return (
     <>
-      <ItemDetail item={product}/>
+      <ItemDetail item={product} key={product.id}/>
     </>
   );
 }
-export default ItemDetailContainer
+export default ItemDetailContainer;

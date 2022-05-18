@@ -23,8 +23,11 @@ function ItemDetail({ item }) {
       <h5 className="p-5 pb-0">Descripción:</h5>
       <p className="p-5 pt-0">{info}</p>
       {sendCart ? (
-        <div className="container p-4 d-flex m-auto justify-content-center">
-          <Link to={`/cart`} className="btn btn-warning p-4 mb-2">
+        <div className="container p-4 d-flex flex-column m-auto justify-content-center">
+          <Link to={`/`} className="btn btn-primary col-10 col-md-3 m-auto mt-4 p-2">
+            Volver a la tienda
+          </Link>
+          <Link to={`/cart`} className="btn btn-warning col-10 col-md-3 m-auto mt-4 p-2">
             Terminar compra
           </Link>
         </div>

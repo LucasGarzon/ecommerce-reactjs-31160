@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import MaskList from './MaskList';
+import SwordList from './SwordList';
 
 function NavBar() {
   return (
@@ -20,9 +21,15 @@ function NavBar() {
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Items
+                Masks
               </a>
               <MaskList/>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Espadas
+              </a>
+              <SwordList/>
             </li>
             <li className="nav-item m-0 m-lg-auto">
               <CartWidget/>
