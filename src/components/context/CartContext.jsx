@@ -7,21 +7,6 @@ export const useCartContext = () => useContext(CartContext)
 const CartContextProvider = ({ children }) => {
   
   const [cart, setCart] = useState([])
-  const [total, setTotal] = useState([])
-
-  //Sumar Total
-  const sumaTotal = () => {
-    const sumAll = []
-    cart.forEach(e => {
-      sumAll.push(e.precio * e.quantity)
-    });
-    const sumWithInitial = sumAll.reduce(
-      (previousValue, currentValuem, index) => previousValue + currentValuem,
-      0
-    );
-    setTotal(sumWithInitial)
-    console.log(total);
-  }
 
   //Validación 
   const isInCart = (id) => cart.find(prod => prod.id === id )
@@ -34,14 +19,12 @@ const CartContextProvider = ({ children }) => {
     if (productoIsInCart) {
       newCart[newCart.findIndex(prod => prod.id === productoIsInCart.id)].quantity += cantidad
       setCart(newCart)
-      sumaTotal()
       return
     } 
     producto.quantity = cantidad
     setCart([...newCart, producto])
-    sumaTotal()
   }
-
+  
   //Borrar del carrito
   const removeItem = (producto) => {
     const newCart = [...cart]
@@ -55,13 +38,9 @@ const CartContextProvider = ({ children }) => {
     const deleteProduct = newCart.filter((prod) => prod.id !== producto.id)
 
     setCart(deleteProduct)
-    sumaTotal()
   }
   
   const clear = () => setCart([])
-
-
-  console.log(cart);
 
   return (
     <CartContext.Provider value={{

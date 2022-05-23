@@ -12,7 +12,7 @@ function SwordList() {
 
     const q = query(collection(db, "ItemCollection"), where("categoria", "==", "sword") )
 		getDocs(q).then(snapshot => {
-			setProducts(snapshot.docs.map((doc) => ( { ...doc.data() } )))
+			setProducts(snapshot.docs.map((doc) => ( { id: doc.id, ...doc.data() } )))
 		})
 	}, [])
   

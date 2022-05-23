@@ -18,14 +18,15 @@ const ItemListContainer = ({greeting}) => {
     if (categoryId) {
       const q = query(collection(db, "ItemCollection"), where("categoria", "==", categoryId) )
       getDocs(q).then(snapshot => {
-        setProducts(snapshot.docs.map((doc) => ( { ...doc.data() } )))
+        setProducts(snapshot.docs.map((doc) => ( { id: doc.id, ...doc.data() } )))
       })
     } else {
       getDocs(itemCollection).then(snapshot => {
-        setProducts(snapshot.docs.map((doc) => ( { ...doc.data() } )))
+        setProducts(snapshot.docs.map((doc) => ( { id: doc.id, ...doc.data() } )))
       })
     }
 	}, [categoryId])
+
 	
   return (
     <>
