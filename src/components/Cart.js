@@ -6,26 +6,13 @@ import { useCartContext } from "./context/CartContext"
 function Cart() {
   
   const { cart } = useCartContext()
+  const { total } = useCartContext()
   const { clear } = useCartContext()
 
-  const [total, setTotal] = useState([])
   const [emptyCart, setEmptyCart] = useState()
-
-  function sumaTotal() {
-    const sumAll = []
-    cart.forEach(e => {
-      sumAll.push(e.precio * e.quantity)
-    });
-    const sumWithInitial = sumAll.reduce(
-      (previousValue, currentValuem, index) => previousValue + currentValuem,
-      0
-    );
-    setTotal(sumWithInitial)
-  }
-
+  
   useEffect(() => {
     cartState()
-    sumaTotal()
   }, [cart])
 
   function cartState() {
@@ -35,6 +22,7 @@ function Cart() {
       setEmptyCart(false)
     }
   }
+  
   
   return (
     <div className="container-fluid">
