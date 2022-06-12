@@ -2,7 +2,7 @@ import {useState } from "react"
 import { useAppContext } from "./context/appContext"
 import { useCartContext } from "./context/CartContext"
 
-const Contador = ({onAdd, StockI, id}) => {
+const Contador = ({StockI, id}) => {
     
     const [count, setCount] = useState(parseInt(0))
 
@@ -28,7 +28,7 @@ const Contador = ({onAdd, StockI, id}) => {
           return
       }
       addToCart(findProduct, cantidad)
-      onAdd(count)
+    //   onAdd(count)
     }
 
     return (

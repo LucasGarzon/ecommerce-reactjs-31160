@@ -48,7 +48,8 @@ const CartContextProvider = ({ children }) => {
       addToCart,
       removeItem,
       clear,
-      setCart
+      setCart,
+      isInCart
     }}>{children}</CartContext.Provider>
   )
 }

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200&display=swap');
+
+* {
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Raleway', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -28,11 +35,40 @@
   color: #61dafb;
 }
 
+.navbar {
+  z-index: 30000;
+}
+
+.main__container {
+  background-color: #282c34;
+}
+
 .card__img {
   height: 40vh;
   width: auto;
 }
 
+
+.header__container {
+  height: 40vh;
+  background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/1029dc118717031.608f267eacad1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.header__btn {
+  width: 15rem  !important;
+}
+
+/* .header__h1 {
+  font-size: 5rem;
+}
+
+.header__p1 {
+  font-size: 1.7rem;
+} */
 
 
 @keyframes App-logo-spin {

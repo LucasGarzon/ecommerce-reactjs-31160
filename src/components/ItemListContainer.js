@@ -2,6 +2,7 @@ import ItemList from './ItemList'
 import { useEffect, useState } from "react";
 import { collection, getDocs, getFirestore, where, query} from "firebase/firestore";
 import { useParams } from 'react-router-dom';
+import Header from './Header';
 
 
 const ItemListContainer = ({greeting}) => {
@@ -31,7 +32,8 @@ const ItemListContainer = ({greeting}) => {
   return (
     <>
 		 <>
-      <div className="container-fluid bg-secondary">
+      <div className="container-fluid p-0 main__container">
+          <Header/>
           <h1 className="p-5 text-light text-center">{greeting}</h1>
           <ItemList items={products}/>   
       </div>  
