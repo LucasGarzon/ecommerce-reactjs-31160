@@ -1,4 +1,3 @@
-import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CartDetail from "./CartDetail";
@@ -11,7 +10,6 @@ function Cart() {
 
   const [emptyCart, setEmptyCart] = useState()
   const [total, setTotal] = useState()
-  const [orderId, setOrderId] = useState()
 
   useEffect(() => {
     cartState()

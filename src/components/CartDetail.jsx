@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useAppContext } from "./context/appContext"
 import { useCartContext } from "./context/CartContext"
 
 function CartDetail( {ProuctCart} ) {
@@ -24,7 +23,7 @@ function CartDetail( {ProuctCart} ) {
 			<div className="card p-1 m-auto mt-2 mb-2 col-11 col-md-6 col-lg-4">
 				<div className="container">
           <div className="row m-auto col-12">
-            <img src={imagen} className="p-5 m-5 card__img m-auto"/>
+            <img src={imagen} className="p-5 m-5 card__img m-auto"alt="foto del producto"/>
           </div>
         </div>
 				<div className="card-body text-center p-3">

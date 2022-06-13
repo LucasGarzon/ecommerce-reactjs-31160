@@ -1,11 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
-
 const AppContext = createContext()
 
 export const useAppContext = () => useContext(AppContext)
-
 
 const AppContextProvider = ({children}) => {
 

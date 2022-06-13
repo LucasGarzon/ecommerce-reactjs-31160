@@ -1,11 +1,7 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { useCartContext } from "./context/CartContext"
 import swal from 'sweetalert';
-
-
-
 
 const BuyerDataEnter = () => {
 
@@ -81,14 +77,14 @@ const BuyerDataEnter = () => {
 
   function checkClientStatus() {
     if (
-    client.name == "" || 
-    client.lastName == "" || 
-    client.street == "" || 
-    client.streetNumber == "" || 
-    client.city == "" || 
-    client.cityState == "" || 
-    client.phone == "" || 
-    client.email == ""
+    client.name === "" || 
+    client.lastName === "" || 
+    client.street === "" || 
+    client.streetNumber === "" || 
+    client.city === "" || 
+    client.cityState === "" || 
+    client.phone === "" || 
+    client.email === ""
     ) {
       setClientStatus(false)
     } else {
@@ -111,10 +107,10 @@ const BuyerDataEnter = () => {
           <form className="col-12 col-lg-6 p-4" id="formBuyer">
             <div className="mb-3">
               <label htmlFor="datosPersonales" className="form-label">Datos personales</label>
-              <input type="text" className="form-control" id="userName" placeholder="Nombre*" name="name" onChange={(event) => handleInput(event)} value={client.name}/>
+              <input type="text" className="form-control" id="userName" placeholder="Nombre" name="name" onChange={(event) => handleInput(event)} value={client.name}/>
             </div>
             <div className="mb-3">
-              <input type="text" className="form-control" id="userLastName" placeholder="Apellido*" name="lastName" onChange={(event) => handleInput(event)} value={client.lastName}/>
+              <input type="text" className="form-control" id="userLastName" placeholder="Apellido" name="lastName" onChange={(event) => handleInput(event)} value={client.lastName}/>
             </div>
             <div className="mb-3">
               <label htmlFor="userDirection" className="form-label">Dirección</label>

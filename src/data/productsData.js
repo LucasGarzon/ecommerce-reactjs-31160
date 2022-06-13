@@ -1,6 +1,5 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
-
 const task = new Promise((resp) => {
     const db = getFirestore();
 
