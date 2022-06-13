@@ -1,3 +1,14 @@
+# Página E-commerce realizada por Lucas Garzon.
+
+Podrás ingresár al site desde el siguiente link: https://ecommerce-reactjs-31160.vercel.app/
+
+# Tecnologías utilizadas:
+
+-Boostrap
+-Boostrap-react
+-Sweet Alert
+-Firebase
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
