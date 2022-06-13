@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 
-function MaskList() {
+function BansuriList() {
 
   const [products, setProducts] = useState([])
 
@@ -27,4 +27,4 @@ function MaskList() {
   )
 }
 
-export default MaskList
+export default BansuriList

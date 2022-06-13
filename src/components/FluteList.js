@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 
-function SwordList() {
+function FluteList() {
 
   const [products, setProducts] = useState([])
 
@@ -26,4 +26,4 @@ function SwordList() {
     </>
   )
 }
-export default SwordList
+export default FluteList

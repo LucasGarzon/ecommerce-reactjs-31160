@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import KalimbaList from './KalimbaList';
-import MaskList from './MaskList';
-import SwordList from './SwordList';
+import BansuriList from './BansuriList';
+import FluteList from './FluteList';
 
 function NavBar() {
   return (
@@ -26,13 +26,13 @@ function NavBar() {
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Bansuris
                 </a>
-                <MaskList/>
+                <BansuriList/>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Flauta Nativa
                 </a>
-                <SwordList/>
+                <FluteList/>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
