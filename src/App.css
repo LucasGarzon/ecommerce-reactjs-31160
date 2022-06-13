@@ -66,6 +66,11 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+.emptyCart_container {
+  height: 60vh;
+  background-image: url(https://d22fxaf9t8d39k.cloudfront.net/012b29e6183cfea23efed68ccc309b129d99b1aa3d7694929faf115ebc8ffaa1102017.jpeg);
+  filter: blur(0.2px);
+}
 
 @keyframes App-logo-spin {
   from {

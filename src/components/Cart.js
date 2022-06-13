@@ -43,20 +43,22 @@ function Cart() {
   return (
     <div className="container-fluid">
       {emptyCart ? (
-        <div className="row d-flex flex-column flex-md-row justify-content-evenly">
-          <h1 className="text-center m-auto p-4">El carrito está vacio</h1>
-          <div className="row m-auto col-12 d-flex flex-column align-content-center">
-            <Link className="btn btn-primary p-2 col-12 col-md-6 m-2" to={`/`}>Volver a la tienda</Link>
+        <div className="row d-flex flex-column align-items-center justify-content-center emptyCart_container">
+          <h1 className="text-center m-0">El carrito está vacio</h1>
+          <div className="row m-0 col-12 d-flex flex-column align-content-center">
+            <Link className="btn btn-dark p-2 col-12 col-md-6 m-2" to={`/`}>Volver a la tienda</Link>
           </div>
         </div>
       ) :
       (
         <div className="row d-flex flex-column flex-md-row justify-content-evenly">
           {cart.map( p  => <CartDetail key={p.id} ProuctCart={p}/>)}
-          <div className="row text-center m-auto p-4">
-             <h2>Total:${total}</h2>
-             <button className="btn btn-danger col-10 col-md-3 m-auto mt-4 p-2" onClick={() => clear()}>Borrar todo el carrito</button>
-             <Link className="btn btn-primary col-10 col-md-3 m-auto mt-4 p-2" to={`/buyerData`}>Finalizar compra</Link>
+          <div className="container border">
+            <div className="row d-flex flex-column text-center m-auto p-4">
+              <h2>Total:${total}</h2>
+              <button className="btn btn-secondary col-10 col-md-3 m-auto mt-4 p-2" onClick={() => clear()}>Borrar todo el carrito</button>
+              <Link className="btn btn-dark col-10 col-md-3 m-auto mt-4 p-2" to={`/buyerData`}>Finalizar compra</Link>
+            </div>
           </div>
         </div>
       )}
