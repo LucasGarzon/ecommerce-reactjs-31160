@@ -1,6 +1,13 @@
-# Página E-coommerce realizada por Lucas Garzon.
+# Página E-commerce realizada por Lucas Garzon.
 
 Podrás ingresár al site desde el siguiente link: https://ecommerce-reactjs-31160.vercel.app/
+
+# Tecnologías utilizadas:
+
+-Boostrap
+-Boostrap-react
+-Sweet Alert
+-Firebase
 
 # Getting Started with Create React App
 
