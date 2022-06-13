@@ -34,7 +34,6 @@ const ItemListContainer = ({greeting}) => {
 		 <>
       <div className="container-fluid p-0 main__container">
           <Header/>
-          <h1 className="p-5 text-light text-center">{greeting}</h1>
           <ItemList items={products}/>   
       </div>  
 		 </>

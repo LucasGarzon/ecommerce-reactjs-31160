@@ -3,7 +3,7 @@ import Item from "./Item.js";
 const ItemList = ({items}) => {
 	
   return (
-    <div className="container-fluid">
+    <div className="container-fluid p-4">
 			<div className="row d-flex flex-column flex-md-row justify-content-evenly">
 				{items.map( p  => <Item key={p.id} product={p}/>)}
 			</div>

@@ -10,7 +10,7 @@ function MaskList() {
 	useEffect(() => {
 		const db = getFirestore()
 
-    const q = query(collection(db, "ItemCollection"), where("categoria", "==", "mask") )
+    const q = query(collection(db, "ItemCollection"), where("categoria", "==", "bansuri") )
 		getDocs(q).then(snapshot => {
 			setProducts(snapshot.docs.map((doc) => ( { id: doc.id, ...doc.data() } )))
 		})
@@ -20,7 +20,7 @@ function MaskList() {
   return (
     <>
       <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li key="allMask"><Link to={`/itemListContainer/${"mask"}`} className="dropdown-item">Todas</Link></li>
+        <li key="allBansuris"><Link to={`/itemListContainer/${"bansuri"}`} className="dropdown-item">Todas</Link></li>
         {products.map(l => <li key={l.id}><Link to={`itemDetail/${l.id}`} className="dropdown-item">{l.nombre}</Link></li>)}
       </ul>        
     </>

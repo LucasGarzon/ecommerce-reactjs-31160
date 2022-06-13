@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
+import KalimbaList from './KalimbaList';
 import MaskList from './MaskList';
 import SwordList from './SwordList';
 
@@ -8,9 +9,9 @@ function NavBar() {
     <>
     <div className='container-fluid'>
       <div className='row'>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark  position-fixed">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark  position-sticky">
         <div className="container-fluid">
-          <Link to={`/`} className="navbar-brand">CHAIN.</Link>
+          <Link to={`/`} className="navbar-brand">PAN DEL INDIO</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -23,15 +24,21 @@ function NavBar() {
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Máscaras
+                  Bansuris
                 </a>
                 <MaskList/>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Espadas
+                  Flauta Nativa
                 </a>
                 <SwordList/>
+              </li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Kalimbas
+                </a>
+                <KalimbaList/>
               </li>
               <li className="nav-item m-0 m-lg-auto">
                 <CartWidget/>

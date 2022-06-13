@@ -32,7 +32,7 @@ function CartDetail( {ProuctCart} ) {
 					<h6 className="p-1">Cantidad: {quantity}</h6>
           <h6 className="p-1">Precio: ${precio}</h6>
           <div className="row m-auto col-12 d-flex flex-column align-content-center">
-            <Link className="btn btn-primary p-2 col-12 col-md-6 m-2" to={`/itemDetail/${id}`}>Agregar más</Link>
+            <Link className="btn btn-primary p-2 col-12 col-md-6 m-2" to={`/itemDetail/${id}`} onClick={() => subItemClick(id)}>Modificar cantidad</Link>
             <button className="btn btn-danger col-12 col-md-6 m-2" onClick={() => subItemClick(id)}>Eliminar item</button>
           </div>
 				</div>

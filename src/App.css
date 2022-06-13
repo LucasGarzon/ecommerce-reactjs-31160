@@ -50,8 +50,8 @@
 
 
 .header__container {
-  height: 40vh;
-  background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/1029dc118717031.608f267eacad1.jpg");
+  height: 60vh;
+  background: url(https://d22fxaf9t8d39k.cloudfront.net/1a2ba694b1d92b8b3abb0fdc3c3ff4238b0eb992a99891b24ac4c6e98bfa227c102017.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -62,13 +62,10 @@
   width: 15rem  !important;
 }
 
-/* .header__h1 {
-  font-size: 5rem;
+.form__img {
+  background-image: url(https://d22fxaf9t8d39k.cloudfront.net/012b29e6183cfea23efed68ccc309b129d99b1aa3d7694929faf115ebc8ffaa1102017.jpeg);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
-.header__p1 {
-  font-size: 1.7rem;
-} */
 
 
 @keyframes App-logo-spin {
