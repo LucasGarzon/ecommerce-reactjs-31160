@@ -51,7 +51,7 @@ const BuyerDataEnter = () => {
         title: "Muchas gracias por tu compra!",
         text: client.name + ", tu orden de compra es " + orderId + ". En breve nos contactaremos para coordinar el envío.",
         icon: "success",
-        html: <Link to={`/`} className="btn btn-dark">"OK!"</Link>, 
+        button: "Ok!"
       }).then(function () {
         window.location.href = "/";
       })

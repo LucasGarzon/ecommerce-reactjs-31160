@@ -16,7 +16,7 @@ export const Item = ( {product} ) => {
 				<div className="card-body text-center p-3">
 					<h5 className="card-title p-3">{nombre}</h5>
 					<h6 className="p-2">Precio: ${precio}</h6>
-					<Link className="btn btn-primary p-2" to={`/itemDetail/${id}`}>Ver más</Link>
+					<Link className="btn btn-dark p-2" to={`/itemDetail/${id}`}>Ver más</Link>
 				</div>
 			</div>
 		</>

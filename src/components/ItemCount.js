@@ -41,7 +41,7 @@ const Contador = ({StockI, id}) => {
               <button className="btn btn-light" onClick={addHandler}>+</button>
             </div>
             <div className="container p-4 d-flex m-auto justify-content-center">
-              <button className="btn btn-light" onClick={() => handleClick(id, count)}>Agregar al carrito</button>
+              <button className="btn btn-dark" onClick={() => handleClick(id, count)}>Agregar al carrito</button>
             </div>
         </div>
         </>
