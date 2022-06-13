@@ -36,9 +36,9 @@ const Contador = ({StockI, id}) => {
         	<div className="container p-4">
           	<h6 className="p-3 text-center">Stock: {StockI}</h6>
             <div className="col-2 m-auto d-flex m-auto justify-content-center">
-              <button className="btn btn-light" onClick={subHandler}>-</button>
-              <strong className="btn btn-light">{count}</strong>
-              <button className="btn btn-light" onClick={addHandler}>+</button>
+              <button className="btn btn-dark" onClick={subHandler}>-</button>
+              <strong className="btn btn-light col-12 col-md-5">{count}</strong>
+              <button className="btn btn-dark" onClick={addHandler}>+</button>
             </div>
             <div className="container p-4 d-flex m-auto justify-content-center">
               <button className="btn btn-dark" onClick={() => handleClick(id, count)}>Agregar al carrito</button>

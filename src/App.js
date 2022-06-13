@@ -7,6 +7,7 @@ import Cart from './components/Cart';
 import CartContextProvider from './components/context/CartContext';
 import AppContextProvider from './components/context/appContext';
 import BuyerDataEnter from './components/BuyerDataEnter';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path={`/cart`} element={<Cart/>}></Route>
             <Route path={`/buyerData`} element={<BuyerDataEnter/>}></Route>
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </CartContextProvider>
     </AppContextProvider>

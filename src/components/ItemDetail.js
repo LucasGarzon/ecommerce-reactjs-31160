@@ -22,11 +22,11 @@ function ItemDetail({ item }) {
       {!isInCart(id) ? (
           <ItemCount StockI={stock} id={id}/>
       ) : (
-        <div className="container p-4 d-flex flex-column m-auto justify-content-center">
-        <Link to={`/`} className="btn btn-primary col-10 col-md-3 m-auto mt-4 p-2">
+        <div className="container p-4 d-flex flex-column m-auto justify-content-center align-items-center">
+        <Link to={`/`} className="btn btn-dark col-10 col-md-3 m-1 p-2">
           Volver a la tienda
         </Link>
-        <Link to={`/cart`} className="btn btn-warning col-10 col-md-3 m-auto mt-4 p-2">
+        <Link to={`/cart`} className="btn btn-secondary col-10 col-md-3 m-1 p-2">
           Terminar compra
         </Link>
       </div>
