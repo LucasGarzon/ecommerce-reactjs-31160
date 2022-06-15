@@ -4,10 +4,13 @@ Podrás ingresár al site desde el siguiente link: https://ecommerce-reactjs-311
 
 # Tecnologías utilizadas:
 
--Boostrap
--Boostrap-react
--Sweet Alert
--Firebase
+-Boostrap.\
+-Boostrap-react.\
+-Sweet Alert.\
+-Firebase.\
+
+# Demostración de compra
+![Proyecto final demostración](https://user-images.githubusercontent.com/96453244/173876732-549b3628-c731-4b83-b903-b465eabfbd7f.gif)
 
 # Getting Started with Create React App
 
